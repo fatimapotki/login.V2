@@ -12,16 +12,11 @@ import {
 //const userDetails =  useState ({ username: "admin" , password="12345"});
 
 export default function Home({ props }) {
-	const { navigation, username, password } = prpos;
 	return (
 		<View style={styles.container}>
 			<StatusBar style={{ backgroundColor: "#1a52bb" }} />
 			<Text style={styles.text}>Login to my App</Text>
-			<TextInput
-				style={styles.input}
-				placeholder='username...'
-				onChangeText={username}
-			/>
+			<TextInput style={styles.input} placeholder='username...' />
 			<TextInput
 				style={styles.input}
 				placeholder='password...'
