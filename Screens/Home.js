@@ -9,12 +9,19 @@ import {
 	StatusBar,
 } from "react-native";
 
-export default function Home({ navigation }) {
+//const userDetails =  useState ({ username: "admin" , password="12345"});
+
+export default function Home({ props }) {
+	const { navigation, username, password } = prpos;
 	return (
 		<View style={styles.container}>
 			<StatusBar style={{ backgroundColor: "#1a52bb" }} />
 			<Text style={styles.text}>Login to my App</Text>
-			<TextInput style={styles.input} placeholder='username...' />
+			<TextInput
+				style={styles.input}
+				placeholder='username...'
+				onChangeText={username}
+			/>
 			<TextInput
 				style={styles.input}
 				placeholder='password...'
@@ -28,7 +35,8 @@ export default function Home({ navigation }) {
 				</TouchableOpacity>
 				<TouchableOpacity
 					style={styles.userBtn}
-					onPress={() => alert("SignUp Successfully")}>
+					onPress={() => navigation.navigate("signUp")}>
+					{/* onPress={() => alert("SignUp Successfully")} */}
 					<Text style={styles.btnText}>Sign-up</Text>
 				</TouchableOpacity>
 			</View>

@@ -8,6 +8,7 @@ import {
 } from "react-native";
 import Home from "./Screens/Home";
 import DetailsScreen from "./Screens/DetailsScreen";
+import SignUp from "./Screens/Sing-upForm";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator, HeaderTitle } from "@react-navigation/stack";
 
@@ -24,7 +25,13 @@ export default function App() {
 				<Screen
 					name='details'
 					options={{ title: "My App" }}
-					component={DetailsScreen}></Screen>
+					component={DetailsScreen}
+				/>
+				<Screen
+					name='signUp'
+					options={{ title: "Sign-Up Form" }}
+					component={SignUp}
+				/>
 			</Navigator>
 		</NavigationContainer>
 	);
